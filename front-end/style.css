@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #575FCF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-title {
+    color:#FFFFFF;
+    font-size: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.js-form {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.fields {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fields-inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}
+
+input[type=text]{
+    width: 250px;
+    height: 30px;
+    margin: 5px;
+    border: 1px solid #485460;
+    border-radius: 7px;
+}
+
+input[type=submit] {
+    background-color: #2ECC71;
+    border: none;
+    width: 5rem;
+    height: 2rem;
+    color: #FFFFFF;
+    border-radius: 10px;
+    margin: 0 45px;
+}
+
+.container-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    padding: 2%;
+}
+
+.column {
+    float: left;
+    padding: 0 10px;
+    align-content: center;
+}
+
+.row {
+    margin: 0 -5px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.card {
+    box-shadow: -1px 8px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 250px;
+    height: 320px;
+    margin: 5%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 50%;
+    object-fit:cover;
+}
+
+.container-infos { 
+    padding: 2px 16px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #575FCF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-footer {
+    color:#FFFFFF;
+}

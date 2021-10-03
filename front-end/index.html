@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Blue Movies</title>
+</head>
+<body>
+    <header>
+        <h1 class="app-title">Meus filmes</h1>
+    </header>
+
+    <main class="main">
+        <section class="container">
+            <form class="js-form">
+                
+                <div class="fields">
+                    
+                    <div class="fields-inputs">
+                        <label for="titulo">Título:</label>
+                        <input autofocus type="text" id="titulo" class="js-movie-input" placeholder="Digite o título do filme" required>
+                    </div>
+                    
+                    <div class="fields-inputs">
+                        <label for="poster_url">Imagem:</label>
+                        <input type="text" id="poster_url" class="js-movie-input" placeholder="Digite a url do poster" required>
+                    </div>
+                    
+                    <div class="fields-inputs">
+                        <label for="genero">Gênero:</label>
+                    <input type="text" id="genero" class="js-movie-input" placeholder="Digite o gênero do filme" required>
+                    </div>
+                    
+                    <div class="fields-inputs">
+                        <label for="nota">Nota:</label>
+                        <input type="text" id="nota" class="js-movie-input" placeholder="Dê uma nota de 0 a 10" >
+                    </div>
+                </div>
+
+                <input type="submit" onsubmit="postFilme(event)" value="Enviar">
+
+                
+            </form>
+        </section>
+        
+        <div class="container-card">
+            <div class="row" id="lista"></div>
+        </div>
+    </main>
+
+    <footer>
+        <h5 class="app-footer">Desenvolvido por Núbia Segóvia para as aulas na Blue EdTech</h5>
+    </footer>
+<script src="index.js"></script>
+</body>
+</html>
