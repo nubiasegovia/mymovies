@@ -101,7 +101,7 @@ const putFilme = async (id) => {
     let titulo = document.getElementById('titulo');
     let genero = document.getElementById('genero');
     let nota = document.getElementById('nota');
-    let poster_url = document.getElementById('poster_url');
+    let poster_url = document.getElementById;('poster_url');
 
     titulo.value = filme.titulo;
     genero.value = filme.genero;
