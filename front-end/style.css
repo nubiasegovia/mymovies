@@ -106,8 +106,8 @@ input[type=text]{
     box-shadow: -1px 8px 8px 0 rgb(0 0 0 / 20%);
     transition: 0.3s;
     border-radius: 5px;
-    width: 250px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
     margin: 5%;
     display: flex;
     flex-wrap: wrap;
