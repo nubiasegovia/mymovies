@@ -130,6 +130,9 @@ input[type=text]{
     margin: 6%;
 }
 
+.btn-delete {
+    background-color: red;
+}
 .container-infos { 
     padding: 2px 16px;
 }

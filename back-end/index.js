@@ -11,7 +11,10 @@ app.use('/filmes', FilmesRouter);
 
 const port = 3000;
 
+app.get('/', (req, res) => {
+    res.send('Boas-vindas!');
+})
 
 app.listen(port, () => {
-    console.log(`O servidor está rodando na porta http://localhost:${port}/filmes`)
+    console.log(`O servidor está rodando na porta http://localhost:${port}`)
 })

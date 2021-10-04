@@ -18,6 +18,7 @@ const getFilmes = async () => {
                         <p>${filme.nota}</p>
                     </div>
                     <button onclick="putFilme()" class="btn">Editar</button>
+                    <button onclick="putFilme()" class="btn btn-delete">Excluir</button>
                 </div>
             </div>
         `)
