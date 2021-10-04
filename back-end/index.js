@@ -5,11 +5,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const port = 3000;
 
 const FilmesRouter = require('./routers/filmes.routes');
 app.use('/filmes', FilmesRouter);
 
+const port = 3000;
 
 
 app.listen(port, () => {

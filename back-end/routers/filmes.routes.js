@@ -27,7 +27,10 @@ router.get('/', (req, res) => {
 })
 
 router.post('/add', (req, res) => {
-    req.body
+    const filme = req.body;
+    console.log(filme);
+    filmes.push(filme);
+    res.send('Filme cadastrado com sucesso!');
 })
 
 module.exports = router;

@@ -42,7 +42,7 @@ const postFilme = async (evento) => {
         poster_url
     }
 
-    const request = new Request(urlApi, {
+    const request = new Request(`${urlApi}/add`, {
         method: 'POST',
         body: JSON.stringify(filme),
         headers: new Headers({
