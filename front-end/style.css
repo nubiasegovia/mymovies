@@ -59,7 +59,7 @@ input[type=text]{
     border-radius: 7px;
 }
 
-input[type=submit] {
+.btn {
     background-color: #2ECC71;
     border: none;
     width: 5rem;
