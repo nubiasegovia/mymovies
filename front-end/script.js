@@ -15,13 +15,15 @@ const getFilmes = async () => {
                     <img src="${filme.poster_url}" alt="Poster" style="width: 100%">
                     <div class="container-infos">
                         <h4>${filme.titulo}</h4>
-                        <p>${filme.genero}</p>
+                        <div class="genero">
+                            <p>${filme.genero}</p>
+                        </div>
                     </div>
                     <div class="container-rating">
                         <p>${filme.nota}</p>
                     </div>
                     <button type="button" class="btn" onclick="putFilme(${filme.id})">Editar</button>
-                    <button onclick="putFilme()" class="btn btn-delete">Excluir</button>
+                    <button type="button" class="btn btn-delete" onclick="deleteFilme(${filme.id})" >Excluir</button>
                 </div>
             </div>
         `)
@@ -71,6 +73,7 @@ const submitForm = async (evento) => {
     const result = await response.json();
     
     if(result){
+        edicao = false;
         getFilmes();
     }
 
@@ -82,7 +85,38 @@ const submitForm = async (evento) => {
     poster_url.value = '';
 
     lista.innerHTML = '';
+}
 
+const getFilmeById = async (id) => {
+    const response = await fetch(`${urlApi}/${id}`);
+    return filme = response.json();
+}
+
+const putFilme = async (id) => {
+    edicao = true;
+    idEdicao = id;
+
+    const filme = await getFilmeById(id);
+
+    let titulo = document.getElementById('titulo');
+    let genero = document.getElementById('genero');
+    let nota = document.getElementById('nota');
+    let poster_url = document.getElementById('poster_url');
+
+    titulo.value = filme.titulo;
+    genero.value = filme.genero;
+    nota.value = filme.nota;
+    poster_url = filme.poster_url;
 
 }
 
+const deleteFilme = async (id) => {
+    const request = new Request(`${urlApi}/${id}`, {
+        method: 'DELETE',
+    })
+    const response = await fetch(request);
+    const data= await response.json();
+    
+    lista.innerHTML  = '';
+    getFilmes();
+}

@@ -147,13 +147,17 @@ input[type=text]{
     color: #FFFFFF;
     border-radius: 20px;
     padding: 2%;
-    font-size: 1rem;
+    font-size: 0.8rem;
     height: 25px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+}
+.genero p {
+    width: max-content;
+    padding: 3%;
 }
 
 .container-rating {
