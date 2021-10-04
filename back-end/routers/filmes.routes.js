@@ -18,7 +18,9 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     const idParam = req.params.id;
-    const index = vagas.findIndex(filme => filme.id == idParam)
+    const index = Filmes.findIndex(filme => filme.id == idParam);
+    const filme = Filmes[index];
+    res.send(filme);
 })
 
 router.post('/add', (req, res) => {
@@ -31,7 +33,16 @@ router.post('/add', (req, res) => {
     });
 })
 
-
+router.put('/:id', (req, res) => {
+    const idParam = req.params.id;
+    const filmeAtualizado = req.body;
+    const index = Filmes.findIndex(filme => filme.id == idParam);
+    Filmes[index] = {
+        id: Filmes[index].id,
+        ...filmeAtualizado
+    }
+    res.send(Filmes[index])
+})
 
 
 module.exports = router;

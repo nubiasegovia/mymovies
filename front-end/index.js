@@ -17,9 +17,7 @@ const getFilmes = async () => {
                     <div class="container-rating">
                         <p>${filme.nota}</p>
                     </div>
-                    <div class="rating">
-                        <p class="card-rating">$${filme.assistido} 
-                    </div>
+                    <button onclick="putFilme()" class="btn">Editar</button>
                 </div>
             </div>
         `)
@@ -63,5 +61,10 @@ const postFilme = async (evento) => {
     if(result) {
         getFilmes();
     }
+
+
+}
+
+const putFilme = () => {
 
 }

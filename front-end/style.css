@@ -103,12 +103,16 @@ input[type=text]{
 }
 
 .card {
-    box-shadow: -1px 8px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: -1px 8px 8px 0 rgb(0 0 0 / 20%);
     transition: 0.3s;
     border-radius: 5px;
     width: 250px;
     height: 320px;
     margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-around;
 }
 
 .card:hover {
@@ -122,8 +126,36 @@ input[type=text]{
     object-fit:cover;
 }
 
+.card button {
+    margin: 6%;
+}
+
 .container-infos { 
     padding: 2px 16px;
+}
+
+.container-infos h4 {
+    font-size: 1.2rem;
+    color: #485460;
+
+}
+.container-infos p{
+    background-color: #3C40C6;
+    color: #FFFFFF;
+    border-radius: 20px;
+    padding: 2%;
+    font-size: 1rem;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.container-rating {
+    font-size: 2.5rem;
+    color: #05C46B;
 }
 
 footer {
