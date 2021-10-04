@@ -9,17 +9,7 @@ const Filmes = [
         nota: 10,
         poster_url: "https://wallpapercave.com/wp/wp2069983.jpg",
         assistido: true
-
-    },
-    {
-        id: Date.now(),
-        titulo: "1917",
-        genero: "Drama, Guerra",
-        nota: 10,
-        poster_url: "https://http2.mlstatic.com/D_NQ_NP_974025-MLB40832700311_022020-O.jpg",
-        assistido: true
-
-    },
+    }
 ]
 
 router.get('/', (req, res) => {
@@ -28,9 +18,7 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     const idParam = req.params.id;
-    const index = Filmes.findIndex((filme) => {
-        return filme.id == idParam;  
-    })
+    const index = vagas.findIndex(filme => filme.id == idParam)
 })
 
 router.post('/add', (req, res) => {
